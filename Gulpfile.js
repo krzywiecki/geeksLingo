@@ -29,7 +29,7 @@ gulp.task('watch', function() {
         gulp.src(htmlDir).pipe(livereload());
     });
     gulp.watch(htmlDir, function(){
-        gulp.src(stylesDir).pipe(livereload());
+        gulp.src(assetsDir + 'styles/').pipe(livereload());
     });
 
     gulp.watch( assetsDir + 'styles/*', ['styles']);
