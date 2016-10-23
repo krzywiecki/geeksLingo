@@ -1,0 +1,24 @@
+{
+  "name": "geekslingo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/krzywiecki/geeksLingo.git"
+  },
+  "author": "dominik@krzywiecki.com",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/krzywiecki/geeksLingo/issues"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.1",
+    "gulp-sass": "~2.3.2",
+    "gulp-livereload": "~3.8.1",
+    "gulp-webserver": "~0.9.1"
+  }
+}
