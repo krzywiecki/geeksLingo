@@ -1,0 +1,287 @@
+body{
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.btn{
+    border: 0;
+    border-bottom: 2px solid;
+
+    &:hover{
+        color: inherit;
+    }
+}
+
+.btn-blue{
+    color: #ffffff;
+    background: #4285F4;
+    border-bottom-color: #133c7c;
+
+    &:hover{
+        background: #3872D1;
+    }
+}
+
+.btn-green{
+    color: #ffffff;
+    background: #34A853;
+    border-bottom-color: #1B5E2D;
+
+    &:hover{
+        background: #2A9146;
+    }
+}
+
+.btn-red{
+    color: #ffffff;
+    background: #EA4335;
+    border-bottom-color: #75251E;
+
+    &:hover{
+        background: #CC392D;
+    }
+}
+
+.btn-yellow{
+    color: #ffffff;
+    background: #E0A804;
+    border-bottom-color: #A17800;
+
+    &:hover{
+        background: #CF9B04;
+    }
+}
+
+.logo{
+    font-size: 20px;
+    font-weight: 700;
+    padding: 9px 0;
+    display: inline-block;
+
+    &:hover{
+        color: #000000;
+        text-decoration: none;
+    } 
+}
+
+.main-nav{
+    width: 100%;
+    position: fixed;
+    background: #ffffff;
+    z-index: 99;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.main-nav-list {
+    list-style-type: none;
+    padding: 0;
+    float: right;
+    margin: 11px 0 13px;
+
+    li{
+        display: inline;
+    }
+
+    a{
+        margin: 0 15px;
+
+        &:hover{
+            color: #000000;
+            text-decoration: none;
+        }
+    }
+
+    .btn{
+        padding: 2px 10px;
+        margin: 0 5px;
+        text-transform: uppercase;
+
+        &:hover{
+            color: #ffffff;
+        }
+    }
+}
+
+.banner {
+    width: 100%;
+    height: 600px;
+    display: block;
+    background: url('../img/banner.jpg') top center;
+    background-size: cover;
+    position: relative;
+    padding: 220px 0;
+
+    &:before{
+        content: "";
+        width: 100%;
+        height: 600px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0) url("../img/bg-overlay.png") repeat scroll 0 0;
+    }
+
+    &:after{
+        content: "";
+        width: 100%;
+        height: 600px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .slogan {
+        font-size: 42px;
+        text-align: center;
+        margin: 0 auto;
+        color: #ffffff;
+        z-index: 9;
+        position: relative;
+        width: 700px;
+        display: block;
+
+        small{
+            color: #ffffff;
+        }
+    }
+
+    .buttons{
+        margin: 20px;
+    }
+
+    .btn{
+        font-size: 18px;
+        padding: 6px 16px 8px;
+    }
+}
+
+footer{
+    color: #ffffff;
+    border-top: 10px solid #ffffff;
+}
+
+.footer-main-list{
+    list-style-type: none;
+    padding: 0;
+
+    li{
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 40px 0 0;
+    }
+}
+
+.footer-main-section-content{
+    padding: 40px 0 0 0;
+    float: right;
+    width: 800px;
+}
+
+.footer-links-list{
+    list-style-type: none;
+    padding: 0;
+    color: #a0a0a0;
+
+    li{
+        display: block;
+
+        &.footer-links-list-header{
+            font-size: 20px;
+            margin: 0 0 20px;
+            color: #ffffff;
+        }
+    }
+
+    a:hover{
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+
+.footer-main-section{
+    background: #1D1D1D;
+}
+
+.footer-header{
+    font-size: 20px;
+    margin: 0 0 10px;
+    color: #ffffff;
+}
+
+.footer-text{
+    color: #a0a0a0;
+    margin: 0 0 20px;
+}
+
+.footer-contact-section-content{
+    padding: 40px 0 0 30px;
+    float: left;
+    width: 340px;
+
+    label {
+        width: 100%;
+    }
+
+    input, textarea {
+        background: #1D1D1D;
+        border: 2px solid #ffffff;
+        border-radius: 2px;
+        width: 100%;
+        padding: 7px 10px;
+        margin: 0 0 10px;
+        font-weight: 400;
+    }
+
+    textarea{
+        resize: none;
+        height: 120px;
+    }
+}
+
+.footer-contact-section{
+    background: #191919;
+}
+
+.footer-main-section, .footer-contact-section{
+    height: 350px;
+}
+
+.footer-terms-section{
+    background: #242424;
+    clear: both;
+}
+
+.footer-terms-content{
+    width: 1300px;
+    padding: 16px 0 15px;
+}
+
+.footer-terms-list{
+    list-style-type: none;
+    color: #a0a0a0;
+    margin: 0;
+
+    li{
+        display: inline;
+        margin: 0 35px 0 0;
+
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    .privace-policy-link{
+        text-decoration: underline;
+
+        &:hover{
+            color: inherit;
+        }
+    }
+}
