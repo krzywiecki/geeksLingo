@@ -3,7 +3,7 @@
 /assets/.sass-cache
 /assets/dist/css/
 /assets/dist/fontello/
-/assets/fontello/
+/assets/fontello/*
 !/assets/fontello/config.json
 /media/
 npm-debug.log
