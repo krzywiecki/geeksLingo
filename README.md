@@ -12,11 +12,6 @@ To download/update fontello icons run:
 
 ```
 make fontopen
-```
-
-and then from second terminal window run:
-
-```
 make fontsave
 ```
 
