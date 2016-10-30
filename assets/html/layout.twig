@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,300i,400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/dist/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/dist/fontello/icons.css" rel="stylesheet">
+    {% block styles %}{% endblock %}
+</head>
+<body>
+    {% block body %}{% endblock %}
+</body>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% block javascripts %}{% endblock %}
+</html>

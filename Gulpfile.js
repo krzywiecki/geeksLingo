@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var twig = require('gulp-twig');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var webserver = require('gulp-webserver');
@@ -8,7 +9,7 @@ const htmlDir = "./html/";
 const assetsDir = "./assets/";
 const distDir = './assets/dist/';
 
-gulp.task('webserver', ['styles'], function() {
+gulp.task('webserver', ['styles', 'twig'], function() {
     gulp.src('.')
         .pipe(webserver({
             livereload: true,
@@ -35,17 +36,24 @@ gulp.task('styles', function () {
         .pipe(gulp.dest( distDir + 'css'));
 });
 
+gulp.task('twig', function() {
+    gulp.src([assetsDir + 'html/*.twig', '!' + assetsDir + 'html/layout.twig'])
+        .pipe(twig())
+        .pipe(gulp.dest(htmlDir));
+});
+
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch(htmlDir, function(){
-        gulp.src(htmlDir).pipe(livereload());
+    gulp.watch(assetsDir + 'html/', function(){
+        gulp.src(assetsDir + 'html/').pipe(livereload());
     });
     gulp.watch(htmlDir, function(){
         gulp.src(assetsDir + 'styles/').pipe(livereload());
     });
 
     gulp.watch( assetsDir + 'styles/*', ['styles']);
+    gulp.watch( assetsDir + 'html/**/*.twig', ['twig']);
 });
 
 gulp.task('default', ['build'], function() {});
-gulp.task('build', ['styles', 'copyfonts', 'icons'], function () {});
+gulp.task('build', ['styles', 'copyfonts', 'icons', 'twig'], function () {});

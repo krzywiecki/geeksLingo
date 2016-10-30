@@ -1,0 +1,25 @@
+{% extends "layout.twig" %}
+
+{% block title %}Geekslingo - strona główna{% endblock %}
+
+{% block body %}
+    {% include 'includes/header.twig' %}
+
+    <main>
+        <div class="banner">
+            <h1 class="slogan">
+                <b>Programisto!</b>
+                Naucz się angielskiego <br/>
+                <small>i znajdź lepiej płatną pracę w zagranicznej firmie.</small>
+                <br/>
+                <div class="buttons">
+                    <a class="btn btn-green" href="#">Zacznij kurs</a>
+                    <a class="btn btn-yellow" href="#">Chattuj z innymi</a>
+                    <a class="btn btn-red" href="#">Częste słowa</a>
+                </div>
+            </h1>
+        </div>
+    </main>
+
+    {% include 'includes/footer.twig' %}
+{% endblock %}
