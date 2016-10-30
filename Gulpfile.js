@@ -45,7 +45,7 @@ gulp.task('twig', function() {
 gulp.task('watch', function() {
     livereload.listen();
     gulp.watch(assetsDir + 'html/', function(){
-        gulp.src(assetsDir + 'html/').pipe(livereload());
+        gulp.src(htmlDir).pipe(livereload());
     });
     gulp.watch(htmlDir, function(){
         gulp.src(assetsDir + 'styles/').pipe(livereload());
