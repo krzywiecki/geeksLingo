@@ -1,0 +1,27 @@
+$blue-hue-1: #4285F4;
+$blue-hue-2: #3872D1;
+$blue-hue-3: #133c7c;
+
+$green-hue-1: #34A853;
+$green-hue-2: #2A9146;
+$green-hue-3: #1B5E2D;
+
+$red-hue-1: #EA4335;
+$red-hue-2: #CC392D;
+$red-hue-3: #75251E;
+
+$yellow-hue-1: #E0A804;
+$yellow-hue-2: #CF9B04;
+$yellow-hue-3: #A17800;
+
+$purple-hue-1: #43103B;
+$purple-hue-2: #240040;
+$purple-hue-3: #130021;
+
+@mixin transition($duration) {
+    -webkit-transition: all $duration ease-in-out;
+    -moz-transition: all $duration ease-in-out;
+    -ms-transition: all $duration ease-in-out;
+    -o-transition: all $duration ease-in-out;
+    transition: all $duration ease-in-out;
+}

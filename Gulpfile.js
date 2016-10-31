@@ -36,6 +36,11 @@ gulp.task('styles', function () {
         .pipe(gulp.dest( distDir + 'css'));
 });
 
+gulp.task('js', function () {
+    gulp.src(assetsDir + 'js/*.js')
+        .pipe(gulp.dest( distDir + 'js'));
+});
+
 gulp.task('twig', function() {
     gulp.src([assetsDir + 'html/*.twig', '!' + assetsDir + 'html/layout.twig'])
         .pipe(twig())
@@ -47,13 +52,19 @@ gulp.task('watch', function() {
     gulp.watch(assetsDir + 'html/', function(){
         gulp.src(htmlDir).pipe(livereload());
     });
+    
     gulp.watch(htmlDir, function(){
         gulp.src(assetsDir + 'styles/').pipe(livereload());
     });
+    
+    gulp.watch(htmlDir, function(){
+        gulp.src(assetsDir + 'js/').pipe(livereload());
+    });
 
     gulp.watch( assetsDir + 'styles/*', ['styles']);
+    gulp.watch( assetsDir + 'js/*', ['js']);
     gulp.watch( assetsDir + 'html/**/*.twig', ['twig']);
 });
 
 gulp.task('default', ['build'], function() {});
-gulp.task('build', ['styles', 'copyfonts', 'icons', 'twig'], function () {});
+gulp.task('build', ['styles', 'copyfonts', 'icons', 'twig', 'js'], function () {});

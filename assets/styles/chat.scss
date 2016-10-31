@@ -1,0 +1,95 @@
+@import 'assets';
+
+.chat-asside {
+    background: $purple-hue-3;
+    height: calc(100vh);
+    box-shadow: 3px 0px 5px rgba(0, 0, 0, 0.4);
+    width: 320px;
+}
+
+.chat-nav {
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.chat-nav-rooms-users{
+    li {
+        display: inline-block;
+        text-align: center;
+        padding: 7px 15px;
+        cursor: pointer;
+        @include transition(0.3s);
+    }
+
+    .active, :hover {
+        background: $purple-hue-1
+    }
+}
+
+.chat-searching {
+    margin: 12px 0;
+    text-align: center;
+
+    input {
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid $purple-hue-1;
+        width: 85%;
+        padding: 10px 5px;
+    }
+}
+
+.scroll-element {
+    opacity: 0;
+    @include transition(0.3s);
+}
+
+.chat-nav-rooms-list{
+    height: 540px;
+
+    &:hover {
+        .scroll-element {
+            opacity: 1;
+        }
+    }
+}
+
+.chat-nav-item {
+    display: table;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 20px 10px 10px;
+    @include transition(0.3s);
+
+    &:hover {
+        background: $purple-hue-1;
+    }
+}
+
+.chat-nav-item-logo {
+    width: 40px;
+    border-radius: 50%;
+    float: left;
+    margin: 0 15px 0 5px;
+    display: table-cell;
+}
+
+.chat-nav-item-room-name {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    padding: 0 10px 0 0;
+}
+
+.chat-nav-item-active-users {
+    font-size: 12px;
+    display: table-cell;
+    vertical-align: middle;
+}

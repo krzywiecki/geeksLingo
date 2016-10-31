@@ -1,0 +1,69 @@
+{% extends "layout.twig" %}
+
+{% block title %}Chat{% endblock %}
+
+{% block styles %}
+<link href="../assets/dist/css/jquery.scrollbar.css" rel="stylesheet">
+<link href="../assets/dist/css/chat.css" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <!-- {% include 'includes/header.twig' %} -->
+
+    <aside class="chat-asside">
+        <nav class="chat-nav">
+            <ul class="col-lg-12 chat-nav-rooms-users">
+                <li class="col-lg-6 active">Rooms</li>
+                <li class="col-lg-6">Users</li>
+            </ul>
+            <ul>
+                <li class="col-lg-12 chat-searching">
+                    <input type="text" placeholder="Wyszukaj pokój">
+                </li>
+            </ul>
+            <ul data-action="implement-custom-scroll" class="scrollbar-inner col-lg-12 chat-nav-rooms-list">
+                <li class="chat-nav-item">
+                    <img class="chat-nav-item-logo" src="../assets/dist/img/js-logo.png"> <span class="chat-nav-item-room-name">Javascript</span> <i class="chat-nav-item-active-users">3244</i>
+                </li>
+                <li class="chat-nav-item">
+                    <img class="chat-nav-item-logo" src="../assets/dist/img/ng-logo.png"> <span class="chat-nav-item-room-name">AngularJS / Angular2</span> <i class="chat-nav-item-active-users">1897</i>
+                </li>
+                <li class="chat-nav-item">
+                    <img class="chat-nav-item-logo" src="../assets/dist/img/ubuntu-logo.png"> <span class="chat-nav-item-room-name">Ubuntu users</span> <i class="chat-nav-item-active-users">1764</i>
+                </li>
+                <li class="chat-nav-item">
+                    <img class="chat-nav-item-logo" src="../assets/dist/img/sf-logo.png"> <span class="chat-nav-item-room-name">All about PHP Symfony framework</span> <i class="chat-nav-item-active-users">1301</i>
+                </li>
+                <li class="chat-nav-item">
+                    <img class="chat-nav-item-logo" src="../assets/dist/img/python-logo.png"> <span class="chat-nav-item-room-name">Pure Python</span> <i class="chat-nav-item-active-users">988</i>
+                </li>
+                <li class="chat-nav-item">
+                    <img class="chat-nav-item-logo" src="../assets/dist/img/cpp-logo.png"> <span class="chat-nav-item-room-name">C++</span> <i class="chat-nav-item-active-users">578</i>
+                </li>
+                <li class="chat-nav-item">
+                    <img class="chat-nav-item-logo" src="../assets/dist/img/spring-logo.png"> <span class="chat-nav-item-room-name">Java Spring framework</span> <i class="chat-nav-item-active-users">344</i>
+                </li>
+                <li class="chat-nav-item">
+                    <img class="chat-nav-item-logo" src="../assets/dist/img/node-logo.png"> <span class="chat-nav-item-room-name">Node.js apps</span> <i class="chat-nav-item-active-users">166</i>
+                </li>
+                <li class="chat-nav-item">
+                    <img class="chat-nav-item-logo" src="../assets/dist/img/html-logo.png"> <span class="chat-nav-item-room-name">HTML5</span> <i class="chat-nav-item-active-users">72</i>
+                </li>
+                <li class="chat-nav-item">
+                    <img class="chat-nav-item-logo" src="../assets/dist/img/css-logo.png"> <span class="chat-nav-item-room-name">CSS3</span> <i class="chat-nav-item-active-users">23</i>
+                </li>
+                <li class="chat-nav-item">
+                    <img class="chat-nav-item-logo" src="../assets/dist/img/java-logo.png"> <span class="chat-nav-item-room-name">Java</span> <i class="chat-nav-item-active-users">5</i>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+    
+    </main>
+{% endblock %}
+
+{% block javascripts %}
+<script src="../assets/dist/js/jquery.scrollbar.min.js"></script>
+<script src="../assets/dist/js/main.js"></script>
+{% endblock %}
